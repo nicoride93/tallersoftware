@@ -1,4 +1,4 @@
-// connect to db
+<?php
 
 $user=getenv('dbuser');
 $pass=getenv('dbpass');
@@ -11,3 +11,4 @@ if (!$link) {
 if (! mysql_select_db('foo') ) {
     die ('Can\'t use foo : ' . mysql_error());
 }
+?>
