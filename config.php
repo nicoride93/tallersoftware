@@ -3,7 +3,7 @@
 $usuario=$_ENV['dbuser'];
 $pass=$_ENV['dbpass'];
 
-$link = mysql_connect("localhost", "beri", "$pass");
+$link = mysql_connect("localhost", "$usuario", "$pass");
 if (!$link) {
     die('Not connected : ' . mysql_error());
 }
