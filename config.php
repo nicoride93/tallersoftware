@@ -3,7 +3,7 @@
 $usuario=getenv('usuario');
 $pass=getenv('dbpass');
 
-$link = mysql_connect("localhost", "$usuario", "$pass");
+$link = mysql_connect("localhost", "beri", "$pass");
 if (!$link) {
     die('Not connected : ' . mysql_error());
 }
