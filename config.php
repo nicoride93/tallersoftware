@@ -1,6 +1,6 @@
 <?php
 
-$usuario=$_ENV['dbuser'];
+$usuario=$_ENV['TERM'];
 $pass=$_ENV['dbpass'];
 
 $link = mysql_connect("localhost", "$usuario", "$pass");
