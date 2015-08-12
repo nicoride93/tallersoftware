@@ -8,7 +8,7 @@ if (!$link) {
     die('Not connected : ' . mysql_error());
 }
 
-if (! mysql_select_db('usuario') ) {
+if (! mysql_select_db('firstdb') ) {
     die ('Can\'t use foo : ' . mysql_error());
 }
 ?>
