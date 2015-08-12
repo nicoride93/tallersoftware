@@ -1,9 +1,9 @@
 <?php
 
-$user=getenv('usuario');
+$usuario=getenv('usuario');
 $pass=getenv('dbpass');
 
-$link = mysql_connect("localhost", "$user", "$pass");
+$link = mysql_connect("localhost", "$usuario", "$pass");
 if (!$link) {
     die('Not connected : ' . mysql_error());
 }
