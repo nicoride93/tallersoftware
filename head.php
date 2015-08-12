@@ -19,7 +19,7 @@ define('MyConst', TRUE);
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>15</title>
+    <title>Taller Software</title>
 
     <!-- Bootstrap core CSS --> 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,5 @@ define('MyConst', TRUE);
   </head>
 
   <body>
-      <?php
-include "uploadnav.php";
-?>
+
       
