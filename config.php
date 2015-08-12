@@ -1,6 +1,6 @@
 <?php
 
-$user=getenv('dbuser');
+$user=getenv('usuario');
 $pass=getenv('dbpass');
 
 $link = mysql_connect("localhost", "$user", "$pass");
