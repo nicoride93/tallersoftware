@@ -2,8 +2,8 @@
 
 $usuario=$_ENV['dbuser'];
 $pass=$_ENV['dbpass'];
-var_dump($usuario);
-var_dump($pass);
+var_dump($_ENV);
+var_dump($_SERVER);
 
 $link = mysql_connect("localhost", "$usuario", "$pass");
 if (!$link) {
