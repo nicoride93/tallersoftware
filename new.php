@@ -1,8 +1,8 @@
-<?php 
+<? 
 include('config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
-$sql = "INSERT INTO `usuario` ( `firstname` ,  `lastname` ,  `email`  ) VALUES(  '{$_POST['firstname']}' ,  '{$_POST['lastname']}' ,  '{$_POST['email']}'  ) "; 
+$sql = "INSERT INTO `usuario` ( `username`  ) VALUES(  '{$_POST['username']}'  ) "; 
 mysql_query($sql) or die(mysql_error()); 
 echo "Added row.<br />"; 
 echo "<a href='list.php'>Back To Listing</a>"; 
@@ -10,8 +10,6 @@ echo "<a href='list.php'>Back To Listing</a>";
 ?>
 
 <form action='' method='POST'> 
-<p><b>Firstname:</b><br /><input type='text' name='firstname'/> 
-<p><b>Lastname:</b><br /><input type='text' name='lastname'/> 
-<p><b>Email:</b><br /><input type='text' name='email'/> 
+<p><b>Username:</b><br /><input type='text' name='username'/> 
 <p><input type='submit' value='Add Row' /><input type='hidden' value='1' name='submitted' /> 
 </form> 
