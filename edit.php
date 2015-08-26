@@ -3,8 +3,10 @@ include('config.php');
 if (isset($_GET['id']) ) { 
 $id = (int) $_GET['id']; 
 if (isset($_POST['submitted'])) { 
+  $has=$_POST['password'];
+  $has1=hash('sha256',$has);
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
-$sql = "UPDATE `usuario` SET  `username` =  '{$_POST['username']}' ,  `password` =  '{$_POST['password']}'   WHERE `id` = '$id' "; 
+$sql = "UPDATE `usuario` SET  `username` =  '{$_POST['username']}' ,  `password` =  '{$has1}'   WHERE `id` = '$id' "; 
 mysql_query($sql) or die(mysql_error()); 
 echo (mysql_affected_rows()) ? "Edited row.<br />" : "Nothing changed. <br />"; 
 echo "<a href='list.php'>Back To Listing</a>"; 
