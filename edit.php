@@ -1,10 +1,10 @@
-<?php 
+<? 
 include('config.php'); 
 if (isset($_GET['id']) ) { 
 $id = (int) $_GET['id']; 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
-$sql = "UPDATE `usuario` SET  `firstname` =  '{$_POST['firstname']}' ,  `lastname` =  '{$_POST['lastname']}' ,  `email` =  '{$_POST['email']}'   WHERE `id` = '$id' "; 
+$sql = "UPDATE `usuario` SET  `username` =  '{$_POST['username']}'   WHERE `id` = '$id' "; 
 mysql_query($sql) or die(mysql_error()); 
 echo (mysql_affected_rows()) ? "Edited row.<br />" : "Nothing changed. <br />"; 
 echo "<a href='list.php'>Back To Listing</a>"; 
@@ -13,9 +13,7 @@ $row = mysql_fetch_array ( mysql_query("SELECT * FROM `usuario` WHERE `id` = '$i
 ?>
 
 <form action='' method='POST'> 
-<p><b>Firstname:</b><br /><input type='text' name='firstname' value='<?php= stripslashes($row['firstname']) ?>' /> 
-<p><b>Lastname:</b><br /><input type='text' name='lastname' value='<?php= stripslashes($row['lastname']) ?>' /> 
-<p><b>Email:</b><br /><input type='text' name='email' value='<?php= stripslashes($row['email']) ?>' /> 
+<p><b>Username:</b><br /><input type='text' name='username' value='<?= stripslashes($row['username']) ?>' /> 
 <p><input type='submit' value='Edit Row' /><input type='hidden' value='1' name='submitted' /> 
 </form> 
-<?php } ?> 
+<? } ?> 
