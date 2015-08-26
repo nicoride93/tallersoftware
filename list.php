@@ -18,10 +18,9 @@ echo "</tr>";
 } 
 echo "</table>"; 
 echo "<a href=new.php>New Row</a>"; 
-/*
-$sql=mysql_query('call mostrarusuarios')
-while($arr = mysql_fetch_array($sql)) {
-  echo $arr[1]
-}
-*/
+
+$sql=mysql_query('call mostrarusuarios');
+ while ($arr = mysql_fetch_array($sql)) {
+ echo $arr[1];
+ }
 ?>
