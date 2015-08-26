@@ -3,12 +3,12 @@
 $usuario=$_SERVER['dbuser'];
 $pass=$_SERVER['dbpass'];
 
-$link = mysqli_connect("localhost", "$usuario", "$pass");
+$link = mysql_connect("localhost", "$usuario", "$pass");
 if (!$link) {
-    die('Not connected : ' . mysqli_error());
+    die('Not connected : ' . mysql_error());
 }
 
-if (! mysqli_select_db('firstdb') ) {
-    die ('Can\'t use foo : ' . mysqli_error());
+if (! mysql_select_db('firstdb') ) {
+    die ('Can\'t use foo : ' . mysql_error());
 }
 ?>
