@@ -18,4 +18,9 @@ echo "</tr>";
 } 
 echo "</table>"; 
 echo "<a href=new.php>New Row</a>"; 
+
+$sql=mysql_query('call mostrarusarios')
+while($arr = mysql_fetch_array($sql)) {
+  foreach($arr as $val) { echo $val;}
+}
 ?>
