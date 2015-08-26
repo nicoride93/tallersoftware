@@ -34,5 +34,5 @@ while ($arr = mysql_fetch_array($sql)) {
 	echo $arr[1];
 }
 
-echo "Test";
+
 ?>
