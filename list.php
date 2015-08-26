@@ -32,14 +32,7 @@ echo "<a href=new.php>New Row</a>";
 $sql = mysql_query('call mostrarusuarios');
 while ($arr = mysql_fetch_array($sql)) {
 	foreach($arr as $k) {
-		echo "<hr>";
-		echo $arr['username'];
-		echo "<hr>";
-		var_dump($row);
-		echo "<hr>";
-		var_dump($k);
-		echo "<hr>";
-		var_dump($arr);
+		echo $arr['username'], "<br>";
 	}
 }
 
