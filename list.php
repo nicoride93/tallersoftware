@@ -21,6 +21,6 @@ echo "<a href=new.php>New Row</a>";
 
 $sql=mysql_query('call mostrarusuarios')
 while($arr = mysql_fetch_array($sql)) {
-  foreach($arr as $val) { echo $val;}
+  foreach($arr as $val) { echo $arr[$val];}
 }
 ?>
