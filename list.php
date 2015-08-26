@@ -19,7 +19,7 @@ echo "</tr>";
 echo "</table>"; 
 echo "<a href=new.php>New Row</a>"; 
 
-$sql=mysql_query('call mostrarusuarios')
+$sql=mysqli_query->multi_query('call mostrarusuarios')
 while($arr = mysql_fetch_array($sql)) {
   foreach($arr as $val => $ll) { echo $arr['username'];}
 }
