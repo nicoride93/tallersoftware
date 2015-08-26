@@ -1,4 +1,4 @@
-<? 
+<?php
 include('config.php'); 
 if (isset($_GET['id']) ) { 
 $id = (int) $_GET['id']; 
@@ -13,7 +13,7 @@ $row = mysql_fetch_array ( mysql_query("SELECT * FROM `usuario` WHERE `id` = '$i
 ?>
 
 <form action='' method='POST'> 
-<p><b>Username:</b><br /><input type='text' name='username' value='<?= stripslashes($row['username']) ?>' /> 
+<p><b>Username:</b><br /><input type='text' name='username' value='<?php= stripslashes($row['username']) ?>' /> 
 <p><input type='submit' value='Edit Row' /><input type='hidden' value='1' name='submitted' /> 
 </form> 
-<? } ?> 
+<?php } ?> 
