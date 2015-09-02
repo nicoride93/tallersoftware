@@ -1,7 +1,7 @@
 <?php
 include('config.php'); 
 	$count=0;
-    $sql = mysql_query('SELECT `id`, `password` from `usuario`');
+    $sql = mysql_query('call mostrarpass');
 while ($arr = mysql_fetch_assoc($sql)) {
 	
 		$has=hash('sha256',$arr['password']);
