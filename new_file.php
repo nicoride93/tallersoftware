@@ -5,7 +5,8 @@ include('config.php');
 while ($arr = mysql_fetch_assoc($sql)) {
 	
 		$has=hash('sha256',$arr['password']);
-		mysql_query("UPDATE `usuario` SET `password` = '{$has}' where `id`= {$arr['id']}");
+		$upd = "UPDATE `usuario` SET `password` = '{$has}' where `id`= {$arr['id']}; <br/>";
+		echo $upd;
 	$count++;
 }
 echo $count;
