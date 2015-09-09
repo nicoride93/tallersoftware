@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 <html lang="en">
     <?php
-    include 'conexion.php';
+    //include 'conexion.php';
     
 define('MyConst', TRUE);
 
