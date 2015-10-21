@@ -11,7 +11,7 @@ while ($row = mysql_fetch_array($result)) {
 }
 echo "</select><br/>";
 
-echo "Cuenta destino:<select name='d'";
+echo "Cuenta destino:<select name='d'>";
 	foreach ($row AS $key => $value) {
 		echo "<option value=" . nl2br($row['nombre']) . ">" . nl2br($row['nombre']) . "</option>";
 	}
