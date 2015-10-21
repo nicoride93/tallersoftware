@@ -12,12 +12,11 @@ while ($row = mysql_fetch_array($result)) {
 echo "</select><br/>";
 
 echo "<select name='d'>";
-$result = mysql_query("call mostarusuarios") or trigger_error(mysql_error());
-while ($row = mysql_fetch_array($result)) {
-	foreach ($row AS $key => $value) {
-		$row[$key] = stripslashes($value);
+while ($row1 = mysql_fetch_array($result)) {
+	foreach ($row1 AS $key1 => $value1) {
+		$row1[$key1] = stripslashes($value1);
 	}
-	echo "Cuenta destino:<option value=" . nl2br($row['nombre']) . ">" . nl2br($row['nombre']) . "</option>";
+	echo "Cuenta destino:<option value=" . nl2br($row1['nombre']) . ">" . nl2br($row1['nombre']) . "</option>";
 }
 echo "</select><br/>
 
