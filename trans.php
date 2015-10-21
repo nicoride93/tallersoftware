@@ -1,7 +1,7 @@
 <?php
 include ('config.php');
 
-echo "<select name='o'>Cuenta origen:";
+echo "Cuenta origen:<select name='o'>";
 $result = mysql_query("call mostarusuarios") or trigger_error(mysql_error());
 while ($row = mysql_fetch_array($result)) {
 	foreach ($row AS $key => $value) {
@@ -11,8 +11,9 @@ while ($row = mysql_fetch_array($result)) {
 }
 echo "</select><br/>";
 
-echo "<select name='d'>Cuenta destino:";
-while ($row1 = mysql_fetch_array($result)) {
+$result1 = mysql_query("call mostarusuarios") or trigger_error(mysql_error());
+echo "Cuenta destino:<select name='d'>";
+while ($row1 = mysql_fetch_array($result1)) {
 	foreach ($row1 AS $key1 => $value1) {
 		$row1[$key1] = stripslashes($value1);
 	}
