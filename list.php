@@ -19,8 +19,8 @@ while ($row = mysql_fetch_array($result)) {
 	<tr>
 		";
 	echo "<td valign='top'>" . nl2br($row['id']) . "</td>";
-	echo "<td valign='top'>" . nl2br($row['username']) . "</td>";
-	echo "<td valign='top'>" . nl2br($row['password']) . "</td>";
+	echo "<td valign='top'>" . nl2br($row['nombre']) . "</td>";
+	echo "<td valign='top'>" . nl2br($row['saldo1']) . "</td>";
 	echo "<td valign='top'><a href=edit.php?id={$row['id']}>Edit</a></td><td><a href=delete.php?id={$row['id']}>Delete</a></td> ";
 	echo "
 	</tr>";
