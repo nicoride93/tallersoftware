@@ -1,3 +1,6 @@
+
+
 <?php
-    phpinfo();
+    include ('config.php');
+	
 ?>
