@@ -11,6 +11,8 @@ while ($row = mysql_fetch_array($result)) {
 }
 echo "</select><br/>";
 
+$link->next_result();
+
 $result1 = mysql_query("call mostarusuarios") or trigger_error(mysql_error());
 echo "Cuenta destino:<select name='d'>";
 while ($row1 = mysql_fetch_array($result1)) {
